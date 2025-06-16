@@ -140,7 +140,10 @@ PRODUCT INFROMATION
     color: var(--Green-500);
     display: inline;
     vertical-align: middle;
-    margin: 2rem 1rem 2rem 0;
+    margin-block-start: 2rem;
+    margin-block-end: 2rem;
+    margin-inline-start: 0;
+    margin-inline-end: 1rem;
 }
 
 .real-price {
@@ -175,6 +178,7 @@ button:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     button:hover,
     button:active {
         transition: none;
