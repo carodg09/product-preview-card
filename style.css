@@ -8,6 +8,7 @@ BASIC SETTING
     --Grey: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
     --Cream: hsl(30, 38%, 92%);
+    --Link: hsl(228, 45%, 44%);
 }
 
 * {
@@ -71,8 +72,8 @@ main {
 
 .thumbnail img {
     width: calc(100% + 3.125rem);
-    margin: -1.5625rem 0 0 -1.5625rem;
-
+    margin-block-start: -1.5625rem;
+    margin-inline-start: -1.5625rem;
 }
 
 @media (min-width: 48rem) {
@@ -132,7 +133,7 @@ PRODUCT INFROMATION
 }
 
 .prices {
-    margin: 0.875rem 0 0.60rem;
+    margin-block-start: 0.875rem;
 }
 
 .special-price h1 {
@@ -174,10 +175,6 @@ button:active {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .prices {
-        margin: 0.875rem 0 0.60rem;
-    }
-
     button:hover,
     button:active {
         transition: none;
@@ -188,7 +185,7 @@ button:active {
 ATTRIBUTION
 -------------------------  */
 .attribution {
-    font-size: 11px;
+    font-size: 0.6875rem;
     text-align: center;
     display: block;
     margin: 1rem;
@@ -196,5 +193,5 @@ ATTRIBUTION
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--Link);
 }
