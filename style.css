@@ -1,0 +1,200 @@
+/* ----------------------
+BASIC SETTING
+-------------------------  */
+:root {
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --Cream: hsl(30, 38%, 92%);
+}
+
+* {
+    font-size: 0.875rem;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--Grey);
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: var(--Cream);
+    position: relative;
+}
+
+
+/* ----------------------
+HEADING & PAGAGRAPH
+-------------------------  */
+h1 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    color: var(--Black);
+    line-height: 2.2rem;
+    margin: 1.2rem 0;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+/* ----------------------
+SECTION DISPLAY
+-------------------------  */
+
+main {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.product-card {
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1.5625rem;
+    background-color: var(--White);
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: calc(100% + 3.125rem);
+    margin: -1.5625rem 0 0 -1.5625rem;
+
+}
+
+@media (min-width: 48rem) {
+    .product-card {
+        flex-direction: row;
+        width: 38rem;
+        min-height: 28rem;
+        margin: auto;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .thumbnail,
+    .product-info {
+        width: 50%;
+    }
+
+    .thumbnail {
+        width: 50%;
+        margin: 0;
+
+    }
+
+    .thumbnail picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .product-info {
+        width: 50%;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+}
+
+/* ----------------------
+PRODUCT INFROMATION
+-------------------------  */
+
+.category {
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    margin: 1rem 0 0;
+}
+
+.prices {
+    margin: 0.875rem 0 0.60rem;
+}
+
+.special-price h1 {
+    color: var(--Green-500);
+    display: inline;
+    vertical-align: middle;
+    margin: 2rem 1rem 2rem 0;
+}
+
+.real-price {
+    text-decoration: line-through;
+    vertical-align: middle;
+}
+
+.cart img {
+    margin: 0 0.5rem;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.625rem;
+    color: var(--White);
+    background-color: var(--Green-500);
+    font-weight: 700;
+}
+
+button:hover,
+button:active {
+    background-color: var(--Green-700);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .prices {
+        margin: 0.875rem 0 0.60rem;
+    }
+
+    button:hover,
+    button:active {
+        transition: none;
+    }
+}
+
+/* ----------------------
+ATTRIBUTION
+-------------------------  */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    margin: 1rem;
+    width: 100%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
